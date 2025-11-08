@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #111;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 80px;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    backdrop-filter: blur(10px);
+
+
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e91e63;
+}
+
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    margin-top: 80px; /* adjust depending on your navbar height */
+}
+
+
+button {
+    padding: 15px 35px;
+    background: #e91e63;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff2f7e;
+    transform: scale(1.05);
+}
+
+
+
+
+.hero {
+    background: url("https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a") center/cover no-repeat;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6); /* Dark overlay */
+}
+
+.hero * {
+    position: relative; /* keep text above overlay */
+}
+
+.hero h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.teams {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 80px 20px;
+    background: #000;
+}
+
+.team {
+    text-align: center;
+}
+
+.team img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.team h3 {
+    margin-top: 15px;
+    font-size: 1.3rem;
+}
+
+.versus {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #e91e63;
+}
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .teams {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .versus {
+        font-size: 2rem;
+    }
+
+    .team img {
+        width: 120px;
+        height: 120px;
+    }
+}
+/* Animation base */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+/* When visible */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: #111;
+    color: #aaa;
+}
+
+footer .socials a {
+    color: #e91e63;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer .socials a:hover {
+    color: #fff;
+}
+
